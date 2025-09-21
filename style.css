@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: white;
-  background: #4B0082; /* Violeta oscuro */
+  background: black; /* Violeta oscuro */
   scroll-behavior: smooth; /* Scroll suave al hacer click en navbar */
 }
 
@@ -28,7 +28,7 @@ body {
 }
 
 .navbar a:hover {
-  color: violet;
+  color: black;
 }
 
 /* Inicio pantalla completa */
@@ -43,8 +43,8 @@ body {
 }
 
 .inicio img {
-  width: 320px;  
-  height: 320px;
+  width: 250px;  
+  height: 250px;
   border-radius: 50%;
   object-fit: cover;
   border: 6px solid white;
@@ -58,7 +58,7 @@ body {
 
 .inicio p {
   font-size: 1.2em;
-  color: violet;
+  color: white;
 }
 
 /* Secciones */
