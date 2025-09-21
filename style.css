@@ -136,7 +136,7 @@ section p {
 .proyecto-item:first-child img {
   width: 600px;
   height: 390px;
-  border: 4px solid white; /* borde blanco */
+  border: 4px solid BLACK; /* borde blanco */
   border-radius: 10px;
   transition: transform 0.3s;
 }
@@ -172,7 +172,7 @@ section p {
   padding: 30px;
   border-radius: 10px;
   width: 80%;
-  max-width: 600px;
+  max-width: 850px;
   text-align: center;
   position: relative;
 }
