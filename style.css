@@ -108,38 +108,35 @@ section p {
 //HERRAMIENTAS: 
 /* HERRAMIENTAS */
 .tools-table {
-  margin: 0 auto; /* centra la tabla */
-  border-collapse: separate; 
+  width: 100%;
+  margin: 20px auto;
+  border-collapse: separate;
   border-spacing: 20px; /* espacio entre herramientas */
+  table-layout: fixed;
+  text-align: center;
 }
 
-.tool {
-  background: #472F01;  /* marrón oscuro */
+.tools-table .tool {
+  background: #472F01; /* marrón oscuro */
   color: white;
   font-weight: bold;
-  font-size: 1em;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%; /* hace el círculo */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  font-size: 1.2em;
+  padding: 25px 10px;
+  border-radius: 10px;
   cursor: default;
   transition: transform 0.3s, background 0.3s;
 }
 
-.tool i {
+.tools-table .tool i {
   font-size: 2.5em;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  display: block;
 }
 
-.tool:hover {
+.tools-table .tool:hover {
   transform: translateY(-5px);
   background: #5a3b0d; /* marrón más claro al pasar el mouse */
 }
-
 
 /* Responsivo: en pantallas pequeñas, 2 por fila */
 @media (max-width: 800px) {
@@ -157,10 +154,6 @@ section p {
     margin-bottom: 15px;
   }
 }
-
-
-
-
 
 
 
