@@ -99,7 +99,30 @@ section p {
 .beige { background: beige; color: #333; }
 .blanco { background: white; color: #333; }
 
-/* Sobre mí */
+
+
+/* Secciones */
+section {
+  width: 100%;
+  padding: 80px 0 60px 0;
+  box-sizing: border-box;
+}
+
+/* Títulos de secciones */
+section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Título "Sobre mí" más elegante */
+#sobre-mi h2 {
+  color: black;
+  font-weight: bold;
+  font-family: 'Georgia', serif; /* tipografía más elegante */
+  font-size: 2.2em;
+}
+
+/* Sección Sobre mí: tarjeta */
 .sobre-mi-card {
   background: white;
   color: #333;
@@ -111,13 +134,34 @@ section p {
   margin: 0 auto;
 }
 
-.sobre-mi-card h3 { font-size: 2em; margin-bottom: 5px; }
-.sobre-mi-card .cargo { font-weight: bold; color: #472F01; margin-bottom: 15px; }
-.sobre-mi-card .descripcion { font-size: 1.1em; margin-bottom: 15px; line-height: 1.5; }
-.sobre-mi-card .educacion { font-size: 1em; margin-bottom: 15px; color: #555; }
+.sobre-mi-card h3 { 
+  font-size: 2em; 
+  margin-bottom: 5px; 
+}
+
+.sobre-mi-card .cargo { 
+  font-weight: bold; 
+  color: #472F01; 
+  margin-bottom: 15px; 
+}
+
+.sobre-mi-card .descripcion { 
+  font-size: 1.1em; 
+  margin-bottom: 15px; 
+  line-height: 1.5; 
+}
+
+.sobre-mi-card .educacion { 
+  font-size: 1em; 
+  margin-bottom: 15px; 
+  color: #555; 
+}
 
 .sobre-mi-card .herramientas-sobre-mi {
-  display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 10px; 
+  margin-top: 10px;
 }
 
 .sobre-mi-card .herramientas-sobre-mi span {
@@ -128,6 +172,13 @@ section p {
   border-radius: 20px;
   font-size: 0.9em;
 }
+
+
+
+
+
+
+
 
 /* Herramientas */
 #herramientas { width: 100%; padding: 80px 0 60px 0; background: white; color: #333; box-sizing: border-box; }
