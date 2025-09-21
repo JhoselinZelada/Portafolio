@@ -372,6 +372,18 @@ section p {
   background-color: #4a90e2;
 }
 
+.descripcion-proyecto {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.descripcion-proyecto li {
+  margin-left: 20px;
+  list-style-type: disc; /* círculo sólido (puede ser circle, square, etc.) */
+}
+
+
 /* Contacto */
 #contacto {
   background: #472F01; /* Fondo marrón oscuro */
