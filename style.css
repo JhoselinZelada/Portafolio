@@ -224,6 +224,7 @@ section p {
   font-size: 2.3em;
   font-weight: bold;
   margin-bottom: 40px;
+  color: black; /* color más oscuro */
 }
 
 .proyectos-container {
@@ -240,13 +241,14 @@ section p {
 }
 
 /* Proyecto 1 - Imagen más grande y borde negro */
-.proyecto-item:first-child img {
-  width: 600px;
-  height: 390px;
-  border: 4px solid black; /* borde negro */
+.proyecto-item img {
+  width: 26px; /* tamaño más pequeño */
+  height: 260px; /* proporción aproximada */
+  border: 4px solid WHITE;
   border-radius: 10px;
   transition: transform 0.3s;
 }
+
 
 .proyecto-item img:hover {
   transform: scale(1.05);
