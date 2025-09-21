@@ -104,6 +104,106 @@ section p {
   background: white;
   color: #333;
 }
+
+
+
+
+/* Sección Proyectos */
+#proyectos {
+  background: beige;
+  color: #333;
+  padding: 80px 20px 60px 20px;
+  text-align: center;
+}
+
+#proyectos h2 {
+  font-size: 2.3em;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.proyectos-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.proyecto-item {
+  text-align: center;
+  cursor: pointer;
+}
+
+.proyecto-item img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border: 4px solid #333;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.proyecto-item img:hover {
+  transform: scale(1.05);
+}
+
+.proyecto-info {
+  margin-top: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+/* Modal */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  background-color: white;
+  color: #333;
+  margin: 5% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content h3 {
+  margin-bottom: 20px;
+}
+
+.modal-img {
+  width: 80%;
+  max-width: 400px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
 /* Contacto */
 #contacto {
   background: #472F01; /* Fondo marrón oscuro */
