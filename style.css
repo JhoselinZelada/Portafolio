@@ -3,8 +3,9 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #333;
-  background: beige; /* Fondo beige */
+  background: #4B0082; /* Violeta oscuro */
 }
+
 
 /* Inicio pantalla completa */
 .inicio {
