@@ -106,14 +106,56 @@ section p {
   color: #333;
 }
 
-/* Sección Sobre mí */
-#sobre-mi {
-  width: 100%;
-  padding: 80px 0 60px 0;
-  background: beige;
+.sobre-mi-card {
+  background: white;
   color: #333;
-  box-sizing: border-box;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
 }
+
+.sobre-mi-card h3 {
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+.sobre-mi-card .cargo {
+  font-weight: bold;
+  color: #472F01; /* marrón oscuro */
+  margin-bottom: 15px;
+}
+
+.sobre-mi-card .descripcion {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.sobre-mi-card .educacion {
+  font-size: 1em;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.sobre-mi-card .herramientas-sobre-mi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.sobre-mi-card .herramientas-sobre-mi span {
+  background: #472F01; /* marrón oscuro */
+  color: white;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.9em;
+}
+
 
 /* Sección Herramientas */
 #herramientas {
