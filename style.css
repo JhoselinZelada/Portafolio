@@ -108,10 +108,11 @@ section p {
 //HERRAMIENTAS: 
 .tools-container {
   display: flex;
-  flex-wrap: wrap;       /* permite varias filas */
+  flex-wrap: nowrap;  /* fuerza todos en la misma fila */
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
   margin-top: 30px;
+  overflow-x: auto; /* permite hacer scroll si no caben */
 }
 
 .tool {
@@ -119,15 +120,13 @@ section p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #472F01; /* marrón oscuro */
+  background: #472F01;
   color: white;
-  width: 120px;   /* ancho fijo */
-  height: 120px;  /* alto fijo */
-  border-radius: 50%; /* círculo */
+  width: 100px;   /* un poco más pequeño para que entren */
+  height: 100px;
   font-size: 1em;
   cursor: default;
   transition: transform 0.3s, background 0.3s;
-  flex: 0 0 auto; /* evita que los items se estiren o encojan */
 }
 
 .tool i {
