@@ -82,7 +82,7 @@ body {
 /* Secciones */
 section {
   width: 100%;
-  padding: 80px 0 60px 0; /* solo arriba y abajo */
+  padding: 80px 0 60px 0;
 }
 
 section h2 {
@@ -104,9 +104,6 @@ section p {
   background: white;
   color: #333;
 }
-
-
-
 
 /* Sección Proyectos */
 #proyectos {
@@ -144,6 +141,19 @@ section p {
 }
 
 .proyecto-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Proyecto 1 - Imagen más grande y borde blanco */
+.proyecto-item img:nth-child(1) {
+  width: 300px;
+  height: 180px;
+  border: 4px solid white;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.proyecto-item img:nth-child(1):hover {
   transform: scale(1.05);
 }
 
@@ -198,42 +208,36 @@ section p {
   cursor: pointer;
 }
 
-
-
-
-
-
-
 /* Contacto */
 #contacto {
   background: #472F01; /* Fondo marrón oscuro */
   color: white;
   padding: 80px 20px 60px 20px;
-  text-align: center; /* Centrar todo en la sección */
+  text-align: center;
 }
 
 #contacto h2 {
   font-weight: bold;
-  font-size: 2.3em; /* Más grande */
+  font-size: 2.5em; /* Título más grande */
   margin-bottom: 40px;
 }
 
 #contacto .contact-container {
   display: flex;
-  justify-content: center; /* Centra los elementos horizontalmente */
-  gap: 80px; /* Espacio entre email y LinkedIn */
+  justify-content: center; 
+  gap: 80px; 
 }
 
 #contacto .contact-item {
   display: flex;
   align-items: center;
-  font-size: 1.5em; /* Tamaño del texto */
+  font-size: 1.3em; /* Texto más chico que antes */
 }
 
 #contacto .contact-item i {
   margin-right: 10px;
   color: #4a90e2; 
-  font-size: 1.8em; /* Ícono proporcional al texto */
+  font-size: 1.6em;
 }
 
 #contacto .contact-item a {
@@ -245,5 +249,3 @@ section p {
 #contacto .contact-item a:hover {
   text-decoration: underline;
 }
-
-
