@@ -3,53 +3,17 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #333;
+  background: #f4f6f9;
 }
 
-/* Header */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background: white;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  z-index: 1000;
-}
-
-header a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav ul li {
-  margin: 0;
-}
-
-/* Botón menú hamburguesa */
-.menu-toggle {
-  display: none;
-  cursor: pointer;
-}
-
-/* Inicio */
+/* Inicio pantalla completa */
 .inicio {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   text-align: center;
-  background: #f4f6f9;
-  padding-top: 80px;
 }
 
 .inicio img {
@@ -71,22 +35,9 @@ nav ul li {
   color: #4a90e2;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background: white;
-    position: absolute;
-    top: 60px;
-    right: 30px;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  }
-  nav.active ul {
-    display: flex;
-  }
+/* Secciones debajo */
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
 }
