@@ -3,9 +3,33 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: white;
-  background: black; /* Violeta oscuro */
+  background: #4B0082; /* Violeta oscuro */
+  scroll-behavior: smooth; /* Scroll suave al hacer click en navbar */
 }
 
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: violet;
+}
 
 /* Inicio pantalla completa */
 .inicio {
@@ -15,17 +39,17 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
+  padding-top: 60px; /* Para que no tape la navbar */
 }
 
 .inicio img {
-  width: 250px;
-  height: 250px;
+  width: 320px;  
+  height: 320px;
   border-radius: 50%;
   object-fit: cover;
   border: 6px solid white;
   margin-bottom: 20px;
 }
-
 
 .inicio h1 {
   font-size: 2.5em;
@@ -34,12 +58,23 @@ body {
 
 .inicio p {
   font-size: 1.2em;
-  color: white; /* Rol en violeta */
+  color: violet;
 }
 
-/* Secciones debajo */
+/* Secciones */
 section {
-  padding: 60px 20px;
+  padding: 80px 20px 60px 20px; /* más espacio arriba por la navbar */
   max-width: 900px;
   margin: auto;
+}
+
+section h2 {
+  font-size: 2em;
+  color: white;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 1.2em;
+  color: white;
 }
