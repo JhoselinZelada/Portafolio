@@ -232,14 +232,19 @@ section h2 {
 }
 
 /* Proyectos */
-#proyectos { background: FFE8D4; color: white; padding: 80px 20px 60px 20px; text-align: center; }
+#proyectos {
+  background: #FFE8D4;  /* fondo beige claro */
+  color: #333;          /* color por defecto del texto */
+  padding: 80px 20px 60px 20px;
+  text-align: center;
+}
 
-
+/* Título de Proyectos Académicos */
 #proyectos h2 {
   font-family: 'Georgia', serif;
   font-weight: bold;
-  color: white;  /* aquí está negro */
-  font-size: 2.0em;
+  color: black;        /* ahora negro */
+  font-size: 2em;
   margin-bottom: 40px;
 }
 
@@ -250,7 +255,7 @@ section h2 {
 .proyecto-item { text-align: center; cursor: pointer; }
 
 /* Clases específicas de imagen según proyecto */
-.proyecto-datawarehouse img { width: 330px; height: 260px; border: 4px solid white; border-radius: 10px; transition: transform 0.3s; }
+.proyecto-datawarehouse img { width: 390px; height: 260px; border: 4px solid white; border-radius: 10px; transition: transform 0.3s; }
 .proyecto-documentacion img { width: 290px; height: 260px; border: 4px solid white; border-radius: 10px; transition: transform 0.3s; }
 
 .proyecto-item img:hover { transform: scale(1.05); }
