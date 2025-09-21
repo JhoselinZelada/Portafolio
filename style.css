@@ -72,6 +72,9 @@ body {
 .inicio h1 {
   font-size: 2.5em;
   margin: 10px 0;
+  font-family: 'Georgia', serif; /* tipografía elegante */
+  font-weight: bold;             /* opcional, para negrita */
+  color: black;                  /* opcional, si querés que resalte sobre el fondo */
 }
 
 .inicio p {
@@ -182,6 +185,13 @@ section h2 {
 
 /* Herramientas */
 #herramientas { width: 100%; padding: 80px 0 60px 0; background: white; color: #333; box-sizing: border-box; }
+#herramientas h2 {
+  font-family: 'Georgia', serif; /* tipografía elegante */
+  font-weight: bold;              /* negrita */
+  color: #000;                    /* negro oscuro */
+  font-size: 2em;                 /* opcional, tamaño del título */
+  margin-bottom: 20px;            /* margen inferior */
+}
 
 .tools-table {
   width: 100%;
@@ -223,6 +233,16 @@ section h2 {
 
 /* Proyectos */
 #proyectos { background: beige; color: #333; padding: 80px 20px 60px 20px; text-align: center; }
+
+
+#proyectos h2 {
+  font-family: 'Georgia', serif; /* tipografía elegante */
+  font-weight: bold;              /* negrita */
+  color: #000;                    /* negro oscuro */
+  font-size: 2.3em;               /* tamaño del título */
+  margin-bottom: 40px;            /* margen inferior */
+}
+
 
 .proyectos-container { display: flex; justify-content: flex-start; gap: 50px; flex-wrap: wrap; padding-left: 50px; }
 
@@ -273,7 +293,13 @@ section h2 {
 
 /* Contacto */
 #contacto { background: #472F01; color: white; padding: 80px 20px 60px 20px; text-align: center; }
-#contacto h2 { font-weight: bold; font-size: 2.5em; margin-bottom: 40px; }
+#contacto h2 {
+  font-family: 'Georgia', serif; /* tipografía elegante */
+  font-weight: bold;              /* negrita */
+  color: white;                   /* color ya existente */
+  font-size: 2.5em;               /* tamaño del título */
+  margin-bottom: 40px;            /* margen inferior */
+}
 #contacto .contact-container { display: flex; justify-content: center; gap: 80px; }
 #contacto .contact-item { display: flex; align-items: center; font-size: 1.3em; }
 #contacto .contact-item i { margin-right: 10px; color: #4a90e2; font-size: 1.6em; }
