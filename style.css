@@ -236,12 +236,13 @@ section h2 {
 
 
 #proyectos h2 {
-  font-family: 'Georgia', serif; /* tipografía elegante */
-  font-weight: bold;              /* negrita */
-  color: #000;                    /* negro oscuro */
-  font-size: 2.0em;               /* tamaño del título */
-  margin-bottom: 40px;            /* margen inferior */
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  color: white;  /* aquí está negro */
+  font-size: 2.0em;
+  margin-bottom: 40px;
 }
+
 
 
 .proyectos-container { display: flex; justify-content: flex-start; gap: 50px; flex-wrap: wrap; padding-left: 50px; }
@@ -303,5 +304,6 @@ section h2 {
 #contacto .contact-container { display: flex; justify-content: center; gap: 80px; }
 #contacto .contact-item { display: flex; align-items: center; font-size: 1.3em; }
 #contacto .contact-item i { margin-right: 10px; color: #2B1700; font-size: 1.6em; }
-#contacto .contact-item a { color: white; text-decoration: none; font-weight: bold; }
+
+#contacto .contact-item a { color: black; text-decoration: none; font-weight: bold; }
 #contacto .contact-item a:hover { text-decoration: underline; }
