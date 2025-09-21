@@ -7,19 +7,67 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Sección inicial pantalla completa -->
-  <section class="hero">
-    <div class="hero-content">
-      <img src="jhosi_foto.jpg" alt="Foto de Jhoselin Zelada" class="perfil">
-      <h1>Jhoselin Zelada</h1>
-      <h2>Analista de Datos Trainee - Desarrolladora</h2>
+  <!-- Header con menú -->
+  <header id="myHeader">
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <!-- Ícono hamburguesa -->
+      <svg id="menu-icon" viewBox="0 0 24 24" fill="none">
+        <line id="top-line" x1="5" y1="7" x2="19" y2="7" stroke="#333" stroke-linecap="round"></line>
+        <line id="middle-line" x1="5" y1="12" x2="19" y2="12" stroke="#333" stroke-linecap="round"></line>
+        <line id="bottom-line" x1="5" y1="17" x2="19" y2="17" stroke="#333" stroke-linecap="round"></line>
+      </svg>
+    </div>
+    <nav id="nav">
+      <a href="#inicio" id="logo">Jhoselin Zelada</a>
+      <ul>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección inicio -->
+  <section id="inicio" class="inicio">
+    <div class="contenido-inicio">
+      <img src="tu-foto.jpg" alt="Foto de Jhoselin Zelada">
+      <div>
+        <h1>Jhoselin Zelada</h1>
+        <p>Analista de Datos Trainee - Desarrolladora</p>
+      </div>
     </div>
   </section>
 
-  <!-- Otras secciones (después las armamos) -->
-  <section class="about">
+  <!-- Sección sobre mí -->
+  <section id="sobre-mi">
     <h2>Sobre mí</h2>
-    <p>Aquí irá tu descripción personal...</p>
+    <p>Aquí irá tu presentación personal...</p>
   </section>
+
+  <!-- Sección habilidades -->
+  <section id="habilidades">
+    <h2>Habilidades</h2>
+    <p>SQL • Power BI • Java • PL/SQL • GitHub</p>
+  </section>
+
+  <!-- Sección proyectos -->
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <p>Aquí mostramos tus proyectos destacados.</p>
+  </section>
+
+  <!-- Sección contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Email: tuemail@gmail.com</p>
+    <p>LinkedIn: <a href="#">linkedin.com/in/tuusuario</a></p>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav').classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
