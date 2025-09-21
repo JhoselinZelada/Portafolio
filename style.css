@@ -255,8 +255,8 @@ section h2 {
 .proyecto-item { text-align: center; cursor: pointer; }
 
 /* Clases específicas de imagen según proyecto */
-.proyecto-datawarehouse img { width: 390px; height: 260px; border: 4px solid white; border-radius: 10px; transition: transform 0.3s; }
-.proyecto-documentacion img { width: 290px; height: 260px; border: 4px solid white; border-radius: 10px; transition: transform 0.3s; }
+.proyecto-datawarehouse img { width: 390px; height: 260px; border: 4px solid black; border-radius: 10px; transition: transform 0.3s; }
+.proyecto-documentacion img { width: 290px; height: 260px; border: 4px solid black; border-radius: 10px; transition: transform 0.3s; }
 
 .proyecto-item img:hover { transform: scale(1.05); }
 .proyecto-info { margin-top: 10px; font-size: 1.1em; font-weight: bold; }
@@ -266,7 +266,7 @@ section h2 {
 
 .modal-content {
   background-color: white;
-  color: #black;
+  color: black;
   margin: 5% auto;
   padding: 30px;
   border-radius: 10px;
