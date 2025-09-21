@@ -2,9 +2,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
   color: white;
-  background: black; /* Violeta oscuro */
-  scroll-behavior: smooth; /* Scroll suave al hacer click en navbar */
 }
 
 /* Navbar */
@@ -15,7 +14,7 @@ body {
   background: rgba(0,0,0,0.7);
   display: flex;
   justify-content: center;
-  padding: 10px 0;
+  padding: 15px 0; /* un poco más grande */
   z-index: 1000;
 }
 
@@ -24,14 +23,15 @@ body {
   text-decoration: none;
   margin: 0 20px;
   font-weight: bold;
+  font-size: 2em; /* letra más grande */
   transition: color 0.3s;
 }
 
 .navbar a:hover {
-  color: black;
+  color: violet;
 }
 
-/* Inicio pantalla completa */
+/* Sección Inicio */
 .inicio {
   height: 100vh;
   display: flex;
@@ -39,12 +39,13 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding-top: 60px; /* Para que no tape la navbar */
+  padding-top: 70px; /* espacio por la navbar */
+  background: black;
 }
 
 .inicio img {
-  width: 250px;  
-  height: 250px;
+  width: 300px;  
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
   border: 6px solid white;
@@ -58,23 +59,32 @@ body {
 
 .inicio p {
   font-size: 1.2em;
-  color: white;
+  color: violet;
 }
 
 /* Secciones */
 section {
-  padding: 80px 20px 60px 20px; /* más espacio arriba por la navbar */
+  padding: 80px 20px 60px 20px;
   max-width: 900px;
   margin: auto;
 }
 
 section h2 {
   font-size: 2em;
-  color: white;
   margin-bottom: 20px;
 }
 
 section p {
   font-size: 1.2em;
-  color: white;
+}
+
+/* Fondos de cada sección */
+.beige {
+  background: beige;
+  color: #333;
+}
+
+.blanco {
+  background: white;
+  color: #333;
 }
