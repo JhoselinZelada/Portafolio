@@ -118,14 +118,17 @@ section p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #472F01; /* marrón oscuro */
+  justify-content: center; /* centra el contenido verticalmente */
+  background: #472F01;
   color: white;
-  padding: 15px 25px;
-  border-radius: 10px;
+  width: 120px;   /* ancho fijo */
+  height: 120px;  /* alto fijo */
+  border-radius: 10px; 
   font-size: 1.2em;
   cursor: default;
   transition: transform 0.3s, background 0.3s;
 }
+
 
 .tool i {
   font-size: 15px;
