@@ -107,37 +107,36 @@ section p {
 
 //HERRAMIENTAS: 
 .tools-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 100px;
-  margin-top: 15px;
+  display: flex;           /* hace que estén en fila */
+  flex-wrap: wrap;         /* permite que se vaya a la siguiente fila si no entra */
+  justify-content: center; /* centra todas las filas */
+  gap: 30px;               /* espacio entre cada herramienta */
+  margin-top: 30px;
 }
 
 .tool {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* centra el contenido verticalmente */
-  background: #472F01;
+  justify-content: center; 
+  background: #472F01; 
   color: white;
-  width: 120px;   /* ancho fijo */
-  height: 120px;  /* alto fijo */
-  border-radius: 10px; 
-  font-size: 1.2em;
+  width: 140px;    /* ancho fijo para todas */
+  height: 140px;   /* alto fijo para todas */
+  border-radius: 50%; /* redondas */
+  font-size: 1em;
   cursor: default;
   transition: transform 0.3s, background 0.3s;
 }
 
-
 .tool i {
-  font-size: 15px;
+  font-size: 2.5em; /* ícono más grande */
   margin-bottom: 10px;
 }
 
 .tool:hover {
   transform: translateY(-5px);
-  background: #5a3b0d; /* un marrón un poco más claro al pasar el mouse */
+  background: #5a3b0d;
 }
 
  
