@@ -110,6 +110,24 @@ section p {
 .tools-table { width: 100%; margin: 20px auto; border-collapse: separate; border-spacing: 20px; /* espacio entre herramientas */ table-layout: fixed; text-align: center; } .tools-table .tool { background: #472F01; /* marrón oscuro */ color: white; font-weight: bold; font-size: 1.2em; padding: 25px 10px; border-radius: 10px; cursor: default; transition: transform 0.3s, background 0.3s; } .tools-table .tool i { font-size: 2.5em; margin-bottom: 10px; display: block; } .tools-table .tool:hover { transform: translateY(-5px); background: #5a3b0d; /* marrón más claro al pasar el mouse */ } /* Responsivo: en pantallas pequeñas, 2 por fila */ @media (max-width: 800px) { .tools-table td { display: inline-block; width: 45%; margin-bottom: 15px; } } /* Responsivo: en pantallas muy pequeñas, 1 por fila */ @media (max-width: 500px) { .tools-table td { width: 90%; margin-bottom: 15px; } }
 
 
+/* Sección Sobre mí */
+#sobre-mi {
+  width: 100%;
+  padding: 80px 0 60px 0;
+  background: beige;
+  color: #333;
+  box-sizing: border-box; /* asegurar que padding no rompa ancho */
+}
+
+/* Sección Herramientas */
+#herramientas {
+  width: 100%;
+  padding: 80px 0 60px 0;
+  background: white;
+  color: #333;
+  box-sizing: border-box;
+}
+
 
 /* Sección Proyectos */
 #proyectos {
