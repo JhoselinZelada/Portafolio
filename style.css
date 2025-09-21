@@ -242,7 +242,7 @@ section p {
 
 /* Proyecto 1 - Imagen más grande y borde negro */
 .proyecto-item img {
-  width: 26px; /* tamaño más pequeño */
+  width: 260px; /* tamaño más pequeño */
   height: 260px; /* proporción aproximada */
   border: 4px solid WHITE;
   border-radius: 10px;
