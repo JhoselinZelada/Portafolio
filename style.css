@@ -110,13 +110,14 @@ section p {
 #contacto .contact-item {
   display: flex;
   align-items: center;
-  margin: 15px 0;
-  font-size: 1.5em;
+  margin: 20px 0;
+  font-size: 2em; /* Aumenta el tamaño del texto */
 }
 
 #contacto .contact-item i {
   margin-right: 15px;
   color: #4a90e2; /* color de los íconos */
+  font-size: 2.2em; /* ícono un poquito más grande que el texto */
 }
 
 #contacto .contact-item a {
@@ -128,4 +129,5 @@ section p {
 #contacto .contact-item a:hover {
   text-decoration: underline;
 }
+
 
