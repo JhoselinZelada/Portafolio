@@ -108,37 +108,20 @@ section p {
 //HERRAMIENTAS: 
 /* HERRAMIENTAS */
 .tools-container {
-  display: flex;           /* fila horizontal */
-  flex-wrap: wrap;         /* permite que pase a la siguiente fila si no entra todo */
-  justify-content: center; /* centra todo horizontalmente */
-  gap: 20px;               /* espacio entre herramientas */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
   margin-top: 30px;
+  max-width: 1200px; /* más ancho que 900px */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tool {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: #472F01; 
-  color: white;
-  width: 150px;   /* ancho fijo */
-  height: 100px;  /* alto fijo */
-  border-radius: 15px; /* bordes redondeados */
-  font-size: 1em;
-  cursor: default;
-  transition: transform 0.3s, background 0.3s;
-  text-align: center;
-}
-
-.tool i {
-  font-size: 2em;  /* ícono grande */
-  margin-bottom: 5px;
-}
-
-.tool:hover {
-  transform: translateY(-5px);
-  background: #5a3b0d;
+  width: 120px; /* ancho más pequeño */
+  height: 120px;
+  border-radius: 15px;
 }
 
 
