@@ -6,9 +6,9 @@
   <title>Portafolio - Jhoselin Zelada</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 </head>
 <body>
+
   <!-- Navbar -->
   <nav class="navbar">
     <a href="#inicio">Inicio</a>
@@ -27,201 +27,150 @@
     </div>
   </section>
 
-  <!-- Sección Sobre mí -->
+  <!-- Sobre mí -->
   <section id="sobre-mi" class="beige">
-  <div class="container">
-    <h2>Sobre mí</h2>
-    <div class="sobre-mi-card">
-      <h3>Jhoselin Zelada</h3>
-      <p class="cargo">Analista de Datos Trainee - Estudiante de Ingeniería en Informática</p>
-      <p class="descripcion">
-        Soy estudiante de 4to año de Ingeniería en Informática en la Universidad de Palermo, apasionada por el análisis y la visualización de datos. Me interesa transformar la información en insights valiosos que ayuden a la toma de decisiones y aporten valor en proyectos.
+    <div class="container">
+      <h2>Sobre mí</h2>
+      <div class="sobre-mi-card">
+        <h3>Jhoselin Zelada</h3>
+        <p class="cargo">Analista de Datos Trainee - Estudiante de Ingeniería en Informática</p>
+        <p class="descripcion">
+          Soy estudiante de 4to año de Ingeniería en Informática en la Universidad de Palermo, apasionada por el análisis y la visualización de datos. Me interesa transformar la información en insights valiosos que ayuden a la toma de decisiones y aporten valor en proyectos.
+        </p>
+        <p class="descripcion">
+          Busco crecer profesionalmente en el área de datos, aprendiendo nuevas herramientas y colaborando en proyectos donde pueda contribuir y seguir desarrollándome.
+        </p>
+        <div class="educacion">
+          <p><strong>Universidad de Palermo, Buenos Aires, Argentina</strong><br>Estudiante de Ingeniería en Informática</p>
+        </div>
+        <div class="herramientas-sobre-mi">
+          <span>SQL</span><span>PL/SQL</span><span>Power BI</span><span>ETL</span>
+          <span>GitHub</span><span>Java</span><span>Data Warehousing</span><span>Dashboards</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Herramientas -->
+  <section id="herramientas" class="blanco">
+    <div class="container">
+      <h2>Herramientas</h2>
+      <table class="tools-table">
+        <tr>
+          <td class="tool"><i class="fas fa-database"></i><br>SQL</td>
+          <td class="tool"><i class="fas fa-chart-bar"></i><br>Power BI</td>
+          <td class="tool"><i class="fas fa-cogs"></i><br>ETL</td>
+          <td class="tool"><i class="fab fa-github"></i><br>GitHub</td>
+          <td class="tool"><i class="fas fa-project-diagram"></i><br>Draw.io</td>
+          <td class="tool"><i class="fas fa-code"></i><br>Java</td>
+          <td class="tool"><i class="fas fa-tasks"></i><br>Gestión de Proyectos</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="proyectos" class="beige">
+    <h2>PROYECTOS ACADÉMICOS:</h2>
+    <div class="proyectos-container">
+      <div class="proyecto-item proyecto-datawarehouse">
+        <img src="PROYECTO_1.png" alt="Proyecto : Data Warehouse sobre delitos en Buenos Aires" onclick="abrirModal('modal1')">
+        <p class="proyecto-info">Proyecto : Data Warehouse-Delitos en Buenos Aires- 2025</p>
+      </div>
+
+      <div class="proyecto-item proyecto-documentacion">
+        <img src="PROYECTO_2.png" alt="Proyecto 2: Documentación de App de RRHH" onclick="abrirModal('modal2')">
+        <p class="proyecto-info">Proyecto : Documentación de App de RRHH - 2024</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Proyecto 1 -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="cerrar" onclick="cerrarModal('modal1')">&times;</span>
+      <h3>PROYECTO DATA WAREHOUSE</h3>
+      <p class="descripcion-proyecto">
+        Proyecto de creación de un Data Warehouse sobre delitos en la ciudad de Buenos Aires, consolidando información de 
+        diferentes fuentes para facilitar el análisis y la visualización de los datos, convirtiéndolos en insights 
+        de valor para la toma de decisiones.
       </p>
-      <p class="descripcion">
-        Busco crecer profesionalmente en el área de datos, aprendiendo nuevas herramientas y colaborando en proyectos donde pueda contribuir y seguir desarrollándome.
+      <div class="carrusel">
+        <span class="prev" onclick="cambiarImagen(-1)">&#10094;</span>
+        <div class="imagenes-carrusel">
+          <img class="slide" src="PROYECTO_1.png" alt="Proyecto 1 - Imagen 1">
+          <img class="slide" src="IMAGEN_2.png" alt="Proyecto 1 - Imagen 2">
+          <img class="slide" src="IMAGEN_4.png" alt="Proyecto 1 - Imagen 3">
+          <img class="slide" src="IMAGEN_3.png" alt="Proyecto 1 - Imagen 4">
+        </div>
+        <span class="next" onclick="cambiarImagen(1)">&#10095;</span>
+      </div>
+      <h4>HERRAMIENTAS:</h4>
+      <p>PL/SQL, POWER BI, ETL, GITHUB, DRAW.IO</p>
+      <a href="https://github.com/JhoselinZelada/Data-WareHouse-Delitos-Buenos-Aires" target="_blank" class="boton-github">
+        ->VER PROYECTO COMPLETO EN GITHUB
+      </a>
+    </div>
+  </div>
+
+  <!-- Modal Proyecto 2 -->
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="cerrar" onclick="cerrarModal('modal2')">&times;</span>
+      <h3>DOCUMENTACIÓN APP DE RRHH</h3>
+      <p class="descripcion-proyecto">
+        Proyecto académico de análisis y diseño de una aplicación para Recursos Humanos.  
+        Incluye diagramas UML (casos de uso, clases, actividades y secuencia) y prototipado de interfaces.
       </p>
-      <div class="educacion">
-        <p><strong>Universidad de Palermo, Buenos Aires, Argentina</strong><br>Estudiante de Ingeniería en Informática</p>
+      <h4>HERRAMIENTAS:</h4>
+      <p>UML, Draw.io, Prototipado de interfaces</p>
+      <a href="https://github.com/JhoselinZelada/Documentaci-n-APP-RRHH" target="_blank" class="boton-github">
+        -> VER PROYECTO COMPLETO EN GITHUB
+      </a>
+    </div>
+  </div>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <div class="contact-container">
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <span>jhoselinzelada2004@gmail.com</span>
       </div>
-      <div class="herramientas-sobre-mi">
-        <span>SQL</span>
-        <span>PL/SQL</span>
-        <span>Power BI</span>
-        <span>ETL</span>
-        <span>GitHub</span>
-        <span>Java</span>
-        <span>Data Warehousing</span>
-        <span>Dashboards</span>
+      <div class="contact-item">
+        <i class="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/jhoselin-zelada/" target="_blank">LinkedIn-Jhoselin-Zelada</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<section id="herramientas" class="blanco">
-  <div class="container">
-    <h2>Herramientas</h2>
-    <table class="tools-table">
-      <tr>
-        <td class="tool"><i class="fas fa-database"></i><br>SQL</td>
-        <td class="tool"><i class="fas fa-chart-bar"></i><br>Power BI</td>
-        <td class="tool"><i class="fas fa-cogs"></i><br>ETL</td>
-        <td class="tool"><i class="fab fa-github"></i><br>GitHub</td>
-        <td class="tool"><i class="fas fa-project-diagram"></i><br>Draw.io</td>
-        <td class="tool"><i class="fas fa-code"></i><br>Java</td>
-        <td class="tool"><i class="fas fa-tasks"></i><br>Gestión de Proyectos</td>
-      </tr>
-    </table>
-  </div>
-</section>
-
-
-
-
-
-  <!-- Sección Proyectos -->
-<section id="proyectos" class="beige">
-  <h2>PROYECTOS ACADÉMICOS: </h2>
-  <div class="proyectos-container">
-    <!-- Proyecto 1 -->
-    <div class="proyecto-item">
-      <img src="PROYECTO_1.png" alt="Proyecto : Data Warehouse sobre delitos en Buenos Aires" onclick="abrirModal('modal1')">
-      <p class="proyecto-info">Proyecto : Data Warehouse-Delitos en Buenos Aires- 2025</p>
-    </div>
-   
-    <!-- Proyecto 2 -->
-<!-- Proyecto 2 -->
-<div class="proyecto-item">
-  <img src="PROYECTO_2.png" alt="Proyecto 2: Documentación de App de RRHH" onclick="abrirModal('modal2')">
-  <p class="proyecto-info">Proyecto : Documentación de App de RRHH - 2024</p>
-</div>
-
-
-<!-- Modal Proyecto 1 -->
-<div id="modal1" class="modal">
-  <div class="modal-content">
-    <span class="cerrar" onclick="cerrarModal('modal1')">&times;</span>
-    
-    <h3>PROYECTO DATA WAREHOUSE</h3>
-    
-    <p class="descripcion-proyecto">
-      Proyecto de creación de un Data Warehouse sobre delitos en la ciudad de Buenos Aires, consolidando información de 
-      diferentes fuentes para facilitar el análisis y la visualización de los datos, convirtiéndolos en insights 
-      de valor para la toma de decisiones.
-    </p>
-    
-    <!-- Carrusel -->
-    <div class="carrusel">
-      <span class="prev" onclick="cambiarImagen(-1)">&#10094;</span>
-      <div class="imagenes-carrusel">
-        <img class="slide" src="PROYECTO_1.png" alt="Proyecto 1 - Imagen 1">
-        <img class="slide" src="IMAGEN_2.png" alt="Proyecto 1 - Imagen 2">
-        <img class="slide" src="IMAGEN_4.png" alt="Proyecto 1 - Imagen 3">
-        <img class="slide" src="IMAGEN_3.png" alt="Proyecto 1 - Imagen 4">
-      </div>
-      <span class="next" onclick="cambiarImagen(1)">&#10095;</span>
-    </div>
-
-    <h4>HERRAMIENTAS:</h4>
-    <p>PL/SQL, POWER BI, ETL, GITHUB, DRAW.IO</p>
-    
-    <a href="https://github.com/JhoselinZelada/Data-WareHouse-Delitos-Buenos-Aires" target="_blank" class="boton-github">
-      ->VER PROYECTO COMPLETO EN GITHUB
-    </a>
-    
-  </div>
-</div>
-
-
-    <!-- Modal Proyecto 2 -->
-<div id="modal2" class="modal">
-  <div class="modal-content">
-    <span class="cerrar" onclick="cerrarModal('modal2')">&times;</span>
-    
-    <h3>DOCUMENTACIÓN APP DE RRHH</h3>
-    
-    <p class="descripcion-proyecto">
-      Proyecto académico de análisis y diseño de una aplicación para Recursos Humanos.  
-      Incluye diagramas UML (casos de uso, clases, actividades y secuencia) y prototipado de interfaces.
-    </p>
-    
-    <h4>HERRAMIENTAS:</h4>
-    <p>UML, Draw.io, Prototipado de interfaces</p>
-    
-    <a href="https://github.com/JhoselinZelada/Documentaci-n-APP-RRHH" target="_blank" class="boton-github">
-      -> VER PROYECTO COMPLETO EN GITHUB
-    </a>
-  </div>
-</div>
-
-
-
-
-<!-- Sección Contacto -->
-<section id="contacto">
-  <h2>Contacto</h2>
-  <div class="contact-container">
-    <div class="contact-item">
-      <i class="fas fa-envelope"></i>
-      <span>jhoselinzelada2004@gmail.com</span>
-    </div>
-    <div class="contact-item">
-      <i class="fab fa-linkedin"></i>
-      <a href="https://www.linkedin.com/in/jhoselin-zelada/" target="_blank">LinkedIn-Jhoselin-Zelada</a>
-    </div>
-  </div>
-</section>
-
-
-
-<script>
-// Abrir modal
-function abrirModal(id) {
-  document.getElementById(id).style.display = "block";
-}
-
-// Cerrar modal
-function cerrarModal(id) {
-  document.getElementById(id).style.display = "none";
-}
-
-// Cerrar modal al hacer click afuera
-window.onclick = function(event) {
-  const modales = document.querySelectorAll('.modal');
-  modales.forEach(modal => {
-    if(event.target == modal){
-      modal.style.display = "none";
+  <script>
+    // Abrir modal
+    function abrirModal(id) { document.getElementById(id).style.display = "block"; }
+    // Cerrar modal
+    function cerrarModal(id) { document.getElementById(id).style.display = "none"; }
+    // Cerrar modal al hacer click afuera
+    window.onclick = function(event) {
+      const modales = document.querySelectorAll('.modal');
+      modales.forEach(modal => { if(event.target == modal){ modal.style.display = "none"; } });
     }
-  });
-}
 
-// ----------------------------
-// Carrusel Proyecto 1
-let indiceSlide = 0;
+    // Carrusel Proyecto 1
+    let indiceSlide = 0;
+    function cambiarImagen(n) { mostrarSlide(indiceSlide += n); }
+    function mostrarSlide(n) {
+      const slides = document.querySelectorAll("#modal1 .slide");
+      if (slides.length === 0) return;
+      if (n >= slides.length) { indiceSlide = 0; }
+      if (n < 0) { indiceSlide = slides.length - 1; }
+      slides.forEach(slide => slide.style.display = "none");
+      slides[indiceSlide].style.display = "block";
+    }
+    document.querySelectorAll("#modal1").forEach(modal => {
+      modal.addEventListener("click", () => mostrarSlide(indiceSlide));
+    });
+  </script>
 
-function cambiarImagen(n) {
-  mostrarSlide(indiceSlide += n);
-}
-
-function mostrarSlide(n) {
-  const slides = document.querySelectorAll("#modal1 .slide");
-  if (slides.length === 0) return; // evitar errores si no hay imágenes
-  if (n >= slides.length) { indiceSlide = 0; }
-  if (n < 0) { indiceSlide = slides.length - 1; }
-
-  slides.forEach(slide => slide.style.display = "none");
-  slides[indiceSlide].style.display = "block";
-}
-
-// Mostrar primera imagen al abrir el modal
-document.querySelectorAll("#modal1").forEach(modal => {
-  modal.addEventListener("click", () => mostrarSlide(indiceSlide));
-});
-</script>
-
-  
-</body>
-
-  
 </body>
 </html>
