@@ -74,7 +74,7 @@ body {
   margin: 10px 0;
   font-family: 'Georgia', serif; /* tipografía elegante */
   font-weight: bold;             /* opcional, para negrita */
-  color: black;                  /* opcional, si querés que resalte sobre el fondo */
+  color: white;                  /* opcional, si querés que resalte sobre el fondo */
 }
 
 .inicio p {
