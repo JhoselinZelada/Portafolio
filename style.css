@@ -146,8 +146,8 @@ section p {
 
 /* Proyecto 1 - Imagen más grande y borde blanco */
 .proyecto-item img:nth-child(1) {
-  width: 300px;
-  height: 180px;
+  width: 450px;
+  height: 250px;
   border: 4px solid white;
   border-radius: 10px;
   transition: transform 0.3s;
