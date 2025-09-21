@@ -104,3 +104,28 @@ section p {
   background: white;
   color: #333;
 }
+
+
+/* Contacto */
+#contacto .contact-item {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  font-size: 1.5em;
+}
+
+#contacto .contact-item i {
+  margin-right: 15px;
+  color: #4a90e2; /* color de los íconos */
+}
+
+#contacto .contact-item a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contacto .contact-item a:hover {
+  text-decoration: underline;
+}
+
