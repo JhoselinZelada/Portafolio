@@ -292,7 +292,7 @@ section h2 {
 .boton-github:hover { background-color: #4a90e2; }
 
 /* Contacto */
-#contacto { background: #472F01; color: white; padding: 80px 20px 60px 20px; text-align: center; }
+#contacto { background: #2B1700; color: white; padding: 80px 20px 60px 20px; text-align: center; }
 #contacto h2 {
   font-family: 'Georgia', serif; /* tipografía elegante */
   font-weight: bold;              /* negrita */
