@@ -128,7 +128,7 @@ section p {
   background: #472F01;
   color: white;
   font-size: 1em;
-  cursor: default;
+  cursor: default;  
   transition: transform 0.3s, background 0.3s;
 }
 
