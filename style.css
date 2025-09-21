@@ -107,26 +107,33 @@ section p {
 /* Contacto */
 #contacto {
   background: #472F01; /* Fondo marrón oscuro */
-  color: white; /* Para que el texto contraste con el fondo */
+  color: white; 
   padding: 80px 20px 60px 20px;
 }
 
 #contacto h2 {
   font-weight: bold; /* Título en negrita */
-  font-size: 2em;
-  margin-bottom: 20px;
+  font-size: 2.3em; /* Un poquito más grande */
+  margin-bottom: 30px;
+  text-align: center; /* Centrar el título */
+}
+
+#contacto .contact-container {
+  display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  gap: 50px; /* Espacio entre email y LinkedIn */
+  flex-wrap: wrap; /* Para que en pantallas muy pequeñas se pongan uno debajo del otro */
 }
 
 #contacto .contact-item {
   display: flex;
   align-items: center;
-  margin: 20px 0;
-  font-size: 1.5em; /* Tamaño más pequeño del texto */
+  font-size: 1.5em; /* Tamaño del texto */
 }
 
 #contacto .contact-item i {
-  margin-right: 15px;
-  color: #4a90e2; /* color de los íconos */
+  margin-right: 10px;
+  color: #4a90e2; 
   font-size: 1.8em; /* ícono proporcional al texto */
 }
 
@@ -139,3 +146,4 @@ section p {
 #contacto .contact-item a:hover {
   text-decoration: underline;
 }
+
