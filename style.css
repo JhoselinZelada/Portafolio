@@ -111,7 +111,7 @@ section p {
   width: 100%;
   margin: 20px auto;
   border-collapse: separate;
-  border-spacing: 20px; /* espacio entre herramientas */
+  border-spacing: 30px; /* más espacio entre herramientas */
   table-layout: fixed;
   text-align: center;
 }
@@ -122,9 +122,15 @@ section p {
   font-weight: bold;
   font-size: 1.2em;
   padding: 25px 10px;
-  border-radius: 10px;
+  border-radius: 50%; /* redondas */
   cursor: default;
   transition: transform 0.3s, background 0.3s;
+  height: 120px;      /* alto fijo */
+  width: 120px;       /* ancho fijo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .tools-table .tool i {
@@ -154,6 +160,7 @@ section p {
     margin-bottom: 15px;
   }
 }
+
 
 
 
