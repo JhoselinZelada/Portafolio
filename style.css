@@ -106,35 +106,39 @@ section p {
 }
 
 //HERRAMIENTAS: 
+/* Contenedor de herramientas */
 .tools-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  justify-content: center; /* centra todo el grupo */
+  gap: 20px; /* espacio entre cada herramienta */
   margin-top: 30px;
 }
 
+/* Cada herramienta */
 .tool {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center; /* centra el contenido verticalmente */
   background: #472F01; /* marrón oscuro */
   color: white;
-  padding: 15px 25px;
-  border-radius: 10px;
-  font-size: 1.2em;
+  width: 120px;   /* ancho fijo */
+  height: 120px;  /* alto fijo = mismo para todos */
+  border-radius: 50%; /* totalmente redondo */
+  font-size: 1em;
   cursor: default;
   transition: transform 0.3s, background 0.3s;
 }
 
 .tool i {
-  font-size: 2em;
-  margin-bottom: 10px;
+  font-size: 2em; /* ícono grande y centrado */
+  margin-bottom: 5px;
 }
 
 .tool:hover {
   transform: translateY(-5px);
-  background: #5a3b0d; /* un marrón un poco más claro al pasar el mouse */
+  background: #5a3b0d; /* marrón más claro al pasar el mouse */
 }
 
 
