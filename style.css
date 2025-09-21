@@ -2,44 +2,91 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f4f6f9;
   color: #333;
 }
 
-/* Sección hero (pantalla completa) */
-.hero {
-  height: 100vh; /* Ocupa toda la pantalla */
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+header a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+/* Botón menú hamburguesa */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+/* Inicio */
+.inicio {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: white;
+  background: #f4f6f9;
+  padding-top: 80px;
 }
 
-.hero-content img.perfil {
+.inicio img {
   width: 180px;
   height: 180px;
-  border-radius: 50%; /* Lo hace circular */
+  border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #4a90e2; /* Borde lindo */
+  border: 4px solid #4a90e2;
   margin-bottom: 20px;
 }
 
-.hero h1 {
+.inicio h1 {
   font-size: 2.5em;
   margin: 10px 0;
-  color: #333;
 }
 
-.hero h2 {
+.inicio p {
   font-size: 1.2em;
-  font-weight: normal;
   color: #4a90e2;
 }
 
-/* Sección siguiente (ejemplo) */
-section {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  nav.active ul {
+    display: flex;
+  }
 }
