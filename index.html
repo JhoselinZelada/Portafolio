@@ -46,6 +46,44 @@
       <p>Aquí podrás agregar tus herramientas y tecnologías que manejás (SQL, Power BI, etc.)</p>
     </div>
   </section>
+
+  <!-- Sección Proyectos -->
+<section id="proyectos" class="beige">
+  <h2>PROYECTOS PERSONALES</h2>
+  <div class="proyectos-container">
+    <!-- Proyecto 1 -->
+    <div class="proyecto-item">
+      <img src="proyecto1.png" alt="Proyecto 1" onclick="abrirModal('modal1')">
+      <p class="proyecto-info">Proyecto 1 - Enero 2025</p>
+    </div>
+    <!-- Proyecto 2 -->
+    <div class="proyecto-item">
+      <img src="proyecto2.png" alt="Proyecto 2" onclick="abrirModal('modal2')">
+      <p class="proyecto-info">Proyecto 2 - Marzo 2025</p>
+    </div>
+  </div>
+</section>
+
+<!-- Modal Proyecto 1 -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="cerrar" onclick="cerrarModal('modal1')">&times;</span>
+    <h3>Proyecto 1 - Detalles</h3>
+    <img src="proyecto1_preview.png" alt="Proyecto 1 preview" class="modal-img">
+    <p>Aquí va toda la información detallada del Proyecto 1: descripción, tecnologías usadas, capturas, links, etc.</p>
+  </div>
+</div>
+
+<!-- Modal Proyecto 2 -->
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="cerrar" onclick="cerrarModal('modal2')">&times;</span>
+    <h3>Proyecto 2 - Detalles</h3>
+    <img src="proyecto2_preview.png" alt="Proyecto 2 preview" class="modal-img">
+    <p>Aquí va toda la información detallada del Proyecto 2: descripción, tecnologías usadas, capturas, links, etc.</p>
+  </div>
+</div>
+
 <!-- Sección Contacto -->
 <section id="contacto">
   <h2>Contacto</h2>
