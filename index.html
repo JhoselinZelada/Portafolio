@@ -68,11 +68,37 @@
 <div id="modal1" class="modal">
   <div class="modal-content">
     <span class="cerrar" onclick="cerrarModal('modal1')">&times;</span>
-    <h3>Proyecto 1 - Detalles</h3>
-    <img src="PROYECTO_1.png" alt="Proyecto 1 preview" class="modal-img">
-    <p>Aquí va toda la información detallada del Proyecto 1: descripción, tecnologías usadas, capturas, links, etc.</p>
+    
+    <h3>PROYECTO DATA WAREHOUSE</h3>
+    
+    <p class="descripcion-proyecto">
+      Proyecto de creación de un Data Warehouse sobre delitos en la ciudad de Buenos Aires, 
+      consolidando información de diferentes fuentes para facilitar el análisis y la visualización 
+      de los datos, convirtiéndolos en insights de valor para la toma de decisiones.
+    </p>
+    
+    <!-- Carrusel -->
+    <div class="carrusel">
+      <span class="prev" onclick="cambiarImagen(-1)">&#10094;</span>
+      <div class="imagenes-carrusel">
+        <img class="slide" src="foto1.png" alt="Proyecto 1 - Imagen 1">
+        <img class="slide" src="foto2.png" alt="Proyecto 1 - Imagen 2">
+        <img class="slide" src="foto3.png" alt="Proyecto 1 - Imagen 3">
+        <img class="slide" src="foto4.png" alt="Proyecto 1 - Imagen 4">
+      </div>
+      <span class="next" onclick="cambiarImagen(1)">&#10095;</span>
+    </div>
+
+    <h4>HERRAMIENTAS:</h4>
+    <p>PL/SQL, POWER BI, ETL, GITHUB, DRAW.IO</p>
+    
+    <a href="https://github.com/tuusuario/tu-repo" target="_blank" class="boton-github">
+      VER PROYECTO COMPLETO EN GITHUB
+    </a>
+    
   </div>
 </div>
+
 
 <!-- Modal Proyecto 2 -->
 <div id="modal2" class="modal">
@@ -102,14 +128,17 @@
 
 
 <script>
+// Abrir modal
 function abrirModal(id) {
   document.getElementById(id).style.display = "block";
 }
 
+// Cerrar modal
 function cerrarModal(id) {
   document.getElementById(id).style.display = "none";
 }
 
+// Cerrar modal al hacer click afuera
 window.onclick = function(event) {
   const modales = document.querySelectorAll('.modal');
   modales.forEach(modal => {
@@ -118,7 +147,32 @@ window.onclick = function(event) {
     }
   });
 }
+
+// ----------------------------
+// Carrusel Proyecto 1
+let indiceSlide = 0;
+
+function cambiarImagen(n) {
+  mostrarSlide(indiceSlide += n);
+}
+
+function mostrarSlide(n) {
+  const slides = document.querySelectorAll("#modal1 .slide");
+  if (slides.length === 0) return; // evitar errores si no hay imágenes
+  if (n >= slides.length) { indiceSlide = 0; }
+  if (n < 0) { indiceSlide = slides.length - 1; }
+
+  slides.forEach(slide => slide.style.display = "none");
+  slides[indiceSlide].style.display = "block";
+}
+
+// Mostrar primera imagen al abrir el modal
+document.querySelectorAll("#modal1").forEach(modal => {
+  modal.addEventListener("click", () => mostrarSlide(indiceSlide));
+});
 </script>
+
+  
 </body>
 
   
