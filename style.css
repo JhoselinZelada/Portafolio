@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  color: #333;
+  color: white;
   background: black; /* Violeta oscuro */
 }
 
@@ -22,7 +22,7 @@ body {
   height: 360px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #4a90e2;
+  border: 6px solid white;
   margin-bottom: 20px;
 }
 
@@ -34,7 +34,7 @@ body {
 
 .inicio p {
   font-size: 1.2em;
-  color: violet; /* Rol en violeta */
+  color: white; /* Rol en violeta */
 }
 
 /* Secciones debajo */
