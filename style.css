@@ -6,6 +6,12 @@ body {
   color: #fff;
   line-height: 1.6;
 }
+.inicio-negro {
+  background-color: #000; /* Fondo negro total */
+  padding: 4rem 2rem;
+  border-radius: 0; /* Sin bordes redondeados para que sea sólido */
+}
+
 
 h1, h2 {
   color: #fff;
