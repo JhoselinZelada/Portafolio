@@ -1,185 +1,237 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Portfolio Jhoselin Zelada</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
+    :root{
+      --bg:#0c0c0c;
+      --panel:#111;
+      --accent:#b26bff;
+      --card:#1a1a1a;
+      --muted:#ccc;
+      --text:#ddd;
+    }
+
+    *{box-sizing: border-box;}
     html, body {
       margin: 0;
       padding: 0;
       width: 100%;
-      height: 100%;
+      min-height: 100%;
       font-family: 'Poppins', sans-serif;
-      display: flex;
-      flex-direction: column;
+      background-color: var(--bg);
+      color: var(--text);
     }
 
-    body {
-      background-color: #0c0c0c;
-      color: white;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      overflow-x: hidden;
-    }
-
-    main {
-      flex: 1;
-      margin-top: 70px;
-    }
-
+    /* NAVBAR */
     .navbar {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 70px;
-      background-color: #1a1a1a;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+      background-color: rgba(26,26,26,0.95);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.6);
       display: flex;
       justify-content: center;
+      align-items: center;
       z-index: 1000;
     }
-
     .navbar .container {
-      width: 90%;
+      width: 92%;
       max-width: 1200px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 0;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
     }
-
-    .navbar nav a {
-      margin-left: 20px;
-      text-decoration: none;
+    .logo {
+      font-weight:600;
       color: white;
-      font-weight: 500;
+      display:flex;
+      gap:8px;
+      align-items:center;
     }
-
-    .navbar nav a:hover {
-      color: #b26bff;
+    .logo span.emoji { font-size:1.3rem; color: var(--accent); }
+    .navbar nav a{
+      margin-left:20px;
+      text-decoration:none;
+      color:white;
+      font-weight:500;
     }
+    .navbar nav a:hover{ color: var(--accent); }
 
+    main{ margin-top:70px; }
+
+    /* PRESENTACION */
     .presentacion {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:60px 20px;
       min-height: calc(100vh - 70px);
     }
+    .presentacion h1{
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      margin:0 0 18px 0;
+      color: var(--accent);
+    }
+    .presentacion .lead{
+      font-size: clamp(1rem, 1.2vw, 1.2rem);
+      max-width:900px;
+      margin:0 0 22px 0;
+      line-height:1.6;
+      color: var(--text);
+    }
+    .btn{
+      display:inline-block;
+      padding:12px 30px;
+      background-color: var(--accent);
+      color:white;
+      text-decoration:none;
+      border-radius:30px;
+      font-weight:600;
+      transition: transform .18s ease, background-color .18s ease;
+    }
+    .btn:hover{ background-color:#8d4fd6; transform: translateY(-3px); }
 
-    .presentacion h1 {
-      font-size: 4rem;
-      margin-bottom: 20px;
-      color: #b26bff;
+    /* ABOUT (foto izquierda, texto derecha) */
+    .aboutme{
+      padding:40px 20px;
+      background-color: var(--panel);
+    }
+    .section-title{
+      text-align:center;
+      font-size:2.2rem;
+      color: var(--accent);
+      margin: 6px 0 22px 0;
     }
 
-    .presentacion p {
-      font-size: 1.2rem;
-      max-width: 900px;
-      margin-bottom: 30px;
-      line-height: 1.6;
+    .sobre-mi-contenedor{
+      max-width:1200px;
+      margin: 0 auto;
+      display:flex;
+      gap:36px;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 12px 30px;
-      background-color: #b26bff;
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      border-radius: 30px;
-      transition: background-color 0.3s ease, transform 0.2s ease;
+    .sobre-mi-imagen{
+      flex: 0 0 300px;
+      display:flex;
+      justify-content:center;
+    }
+    .sobre-mi-imagen img{
+      width:300px;
+      height:300px;
+      object-fit:cover;
+      border-radius:50%;
+      border:4px solid var(--accent);
+      box-shadow: 0 8px 30px rgba(178,107,255,0.12);
     }
 
-    .btn:hover {
-      background-color: #8d4fd6;
-      transform: scale(1.05);
+    .sobre-mi-texto{
+      flex: 1 1 460px;
+      max-width:760px;
+      color: var(--text);
+      font-size:1.03rem;
+      line-height:1.7;
+      text-align:justify;
     }
 
-    .aboutme {
-      padding: 40px 20px;
-      background-color: #111;
+    /* Habilidades */
+    .habilidades_contenido{
+      padding: 28px 20px 40px 20px;
+      background-color: transparent;
     }
-
-    .aboutme_text_centrado h2 {
-      font-size: 2.5rem;
-      color: #b26bff;
+    .habilidades{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      justify-content:center;
+      margin-top:12px;
     }
-
-    .aboutme_text_centrado p {
-      font-size: 1.1rem;
-      color: #ccc;
-    }
-
-    .aboutme_contenido p {
-      font-size: 1.05rem;
-      line-height: 1.7;
-      margin-bottom: 15px;
-      color: #ddd;
-      text-align: justify;
-    }
-
-    .habilidad {
+    .habilidad{
       background-color: #1d1d1d;
-      color: #b26bff;
-      border-radius: 8px;
-      padding: 12px 24px;
-      font-weight: 600;
-      font-size: 15px;
-      box-shadow: 0 3px 5px rgba(0,0,0,0.4);
-      transition: all 0.3s ease;
+      color: var(--accent);
+      border-radius:8px;
+      padding:10px 18px;
+      font-weight:600;
+      font-size:0.95rem;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.45);
     }
 
-    .habilidad:hover {
-      background-color: #2b2b2b;
-      transform: translateY(-2px);
-    }
-
-    .mis_proyectos_contenido {
+    /* Proyectos */
+    .mis_proyectos_contenido{
       padding: 40px 20px;
-      background-color: #0c0c0c;
+      background-color: var(--bg);
+    }
+    .proyecto_contenedor{
+      max-width:1200px;
+      margin:0 auto;
+      display:flex;
+      flex-wrap:wrap;
+      gap:20px;
+      justify-content:center;
+    }
+    .proyecto{
+      background-color: var(--card);
+      border-radius:8px;
+      padding:18px;
+      width:320px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+      color:white;
+    }
+    .proyecto h3{ margin-top:0; color: #fff; }
+    .proyecto p{ color:#ddd; line-height:1.5; font-size:0.95rem; }
+
+    /* Contacto */
+    .contacto_seccion{
+      padding:40px 20px;
+      background-color: var(--panel);
+      text-align:center;
+    }
+    .contacto-line{
+      display:flex;
+      gap:30px;
+      justify-content:center;
+      align-items:center;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+    .contacto-line a{
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:600;
+      font-size:1.05rem;
+    }
+    .contacto-line a:hover{ text-decoration:underline; }
+
+    footer{
+      background-color: var(--panel);
+      padding:28px 20px;
+      text-align:center;
+      color:#ccc;
     }
 
-    .mis_proyectos_contenido h2 {
-      text-align: center;
-      font-size: 2rem;
-      color: #b26bff;
+    /* Responsive */
+    @media (max-width:900px){
+      .sobre-mi-imagen img{ width:220px; height:220px; }
+      .sobre-mi-imagen{ flex-basis:220px; }
+      .sobre-mi-texto{ font-size:0.99rem; }
+      .presentacion{ padding:48px 18px; }
     }
-
-    .proyecto {
-      background-color: #1a1a1a;
-      border-radius: 8px;
-      padding: 20px;
-      flex: 1 1 300px;
-      max-width: 350px;
-      box-shadow: 0 3px 5px rgba(0,0,0,0.4);
-      transition: all 0.3s ease;
-      color: white;
-    }
-
-    .proyecto:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.6);
-    }
-
-    footer {
-      width: 100%;
-      background-color: #111;
-      padding: 30px 20px;
-      text-align: center;
-      color: white;
-    }
-
-    footer a {
-      color: #b26bff;
-      text-decoration: none;
+    @media (max-width:640px){
+      .sobre-mi-contenedor{ flex-direction:column; gap:18px; align-items:center; text-align:center; }
+      .sobre-mi-texto{ text-align:center; }
+      .contacto-line{ gap:14px; }
+      .presentacion h1{ font-size:2rem; }
     }
   </style>
 </head>
@@ -187,75 +239,67 @@
 
   <header class="navbar">
     <div class="container">
-      <h1 class="logo">Jhoselin Zelada</h1>
+      <div class="logo"><span class="emoji">📈✨</span><strong>Jhoselin Zelada</strong></div>
       <nav>
         <a href="#about">Sobre mí</a>
         <a href="#projects">Proyectos</a>
-        <a href="#contact">Contacto</a>
+        <a href="#contacto">Contacto</a>
       </nav>
     </div>
   </header>
 
- <main>
-  <section class="presentacion">
-    <h1>Hola!, Soy Jhoselin Zelada 💻✨</h1>
+  <main>
+    <!-- Presentación -->
+    <section class="presentacion">
+      <h1>Hola!, Soy Jhoselin Zelada</h1>
+      <p class="lead">Analista de Datos Trainee | Estudiante avanzada de Ingeniería en Informática.<br><br>Me apasiona transformar datos en decisiones claras y confiables, buscando siempre aprender, mejorar y aportar valor real.</p>
+      <a href="#projects" class="btn">Ver mis proyectos</a>
+    </section>
 
-    <p>Analista de Datos Trainee | Estudiante avanzada de Ingeniería en Informática.</p>
-
-
-
-    <p>Me apasiona transformar datos en decisiones claras y confiables, buscando siempre aprender, mejorar y aportar valor real.</p>
-
-    <a href="#projects" class="btn">Ver mis proyectos</a>
-  </section>
-</main>
-
-
+    <!-- Sobre mí (foto izquierda, texto derecha) -->
     <section id="about" class="aboutme">
-      <div class="aboutme_text_centrado">
-        <h2>Sobre mí</h2>
-        
+      <h2 class="section-title">Sobre mí</h2>
+
+      <div class="sobre-mi-contenedor">
+        <div class="sobre-mi-imagen">
+          <!-- Reemplazá 'mi-foto.jpg' por el archivo real -->
+          <img src="jhosi_foto.jng" alt="Foto de Jhoselin Zelada">
+        </div>
+
+        <div class="sobre-mi-texto">
+          <p>
+            Soy Analista de Datos en formación y estudiante avanzada de Ingeniería en Informática. Me especializo en la gestión, consulta y análisis de datos, trabajando con herramientas como SQL, Power BI y arquitecturas de bases de datos. Disfruto transformar información compleja en soluciones claras, limpias y orientadas a la toma de decisiones.
+          </p>
+
+          <p>
+            Me interesa desarrollarme en un equipo colaborativo, con propósito y enfoque en el aprendizaje continuo, donde pueda aportar valor a través de mi capacidad analítica, mi disciplina y mi compromiso. Mi objetivo es contribuir activamente a la creación de soluciones claras, seguras y de calidad.
+          </p>
+        </div>
       </div>
 
-      <div class="aboutme_contenido">
-        <p>
-        Soy Analista de Datos en formación y estudiante avanzada de Ingeniería en Informática. 
-        Me especializo en la gestión, consulta y análisis de datos, trabajando con herramientas 
-        como SQL, Power BI y arquitecturas de bases de datos. Disfruto transformar información 
-        compleja en soluciones claras, limpias y orientadas a la toma de decisiones.
-        </p>
-         <br>
-         <p>
-        Me interesa desarrollarme en un equipo colaborativo, con propósito y enfoque en el 
-        aprendizaje continuo, donde pueda aportar valor a través de mi capacidad analítica, mi 
-        disciplina y mi compromiso. Mi objetivo es contribuir activamente a la creación de 
-        soluciones claras, seguras y de calidad.
-        </p>
- 
-      </div>
-
+      <!-- Habilidades -->
       <div class="habilidades_contenido">
-        <h3 style="color:#b26bff">Mis habilidades</h3>
-        <div class="habilidades" style="display:flex;flex-wrap:wrap;gap:10px;">
+        <h2 class="section-title" style="margin-top:34px;">Mis habilidades</h2>
+        <div class="habilidades">
           <div class="habilidad">SQL</div>
           <div class="habilidad">Power BI</div>
           <div class="habilidad">ETL</div>
           <div class="habilidad">Java</div>
           <div class="habilidad">Gestión de proyectos</div>
           <div class="habilidad">Documentación técnica</div>
-          <div class="habilidad">Arquitecturas de BD</div>
+          <div class="habilidad">Architecturas de BD</div>
           <div class="habilidad">GitHub</div>
           <div class="habilidad">Draw.io</div>
           <div class="habilidad">Paquete Office</div>
         </div>
       </div>
     </section>
-  
 
+    <!-- Proyectos -->
     <section id="projects" class="mis_proyectos_contenido">
-      <h2>Proyectos</h2>
-      <div class="proyecto_contenedor" style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;">
+      <h2 class="section-title">Proyectos</h2>
 
+      <div class="proyecto_contenedor">
         <div class="proyecto">
           <h3>Data Warehouse</h3>
           <p><strong>Descripción:</strong> Desarrollo completo de un Data Warehouse para análisis estructurado y consultas eficientes.</p>
@@ -279,45 +323,25 @@
           <p><strong>Descripción:</strong> Modelo de Machine Learning para predecir salarios usando múltiples features.</p>
           <p><strong>Herramientas:</strong> Python | ML | Pandas</p>
         </div>
-
       </div>
     </section>
 
-<section id="contacto" class="contacto_seccion" style="padding:60px 20px;background-color:#111;">
-  <h2 style="text-align:Center;font-size:2.2rem;color:#b26bff;margin-bottom:30px;">
-    Contacto
-  </h2>
+    <!-- Contacto -->
+    <section id="contacto" class="contacto_seccion">
+      <h2 class="section-title">Contacto</h2>
+      <p style="color:var(--muted); margin-top:8px;">Si querés contactarme, podés escribirme por:</p>
 
-  <div style="
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      gap:40px;
-      font-size:1.2rem;
-    ">
-
-    <a href="mailto:jhoselinzelada2004@gmail.com" 
-       style="color:#b26bff;text-decoration:none;font-weight:600;">
-       📩 jhoselinzelada2004@gmail.com
-    </a>
-
-    <a href="https://github.com/JhoselinZelada" target="_blank"
-       style="color:#b26bff;text-decoration:none;font-weight:600;">
-       💻 GitHub
-    </a>
-
-    <a href="http://www.linkedin.com/in/jhoselin-zelada" target="_blank"
-       style="color:#b26bff;text-decoration:none;font-weight:600;">
-       🔗 LinkedIn
-    </a>
-
-  </div>
-</section>
-
-
+      <div class="contacto-line" aria-label="Contact links">
+        <a href="mailto:jhoselinzelada2004@gmail.com">📩 jhoselinzelada2004@gmail.com</a>
+        <a href="https://github.com/JhoselinZelada" target="_blank" rel="noopener">💻 GitHub</a>
+        <a href="http://www.linkedin.com/in/jhoselin-zelada" target="_blank" rel="noopener">🔗 LinkedIn</a>
+      </div>
+    </section>
   </main>
 
-  <footer id="contact">
+  <footer>
     <p>© 2025 Jhoselin Zelada | Diseñado con ❤️</p>
-    <p>
-      
+  </footer>
+
+</body>
+</html>
